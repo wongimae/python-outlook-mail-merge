@@ -1,7 +1,7 @@
 import win32com.client
 import pandas as pd
 
-file = pd.ExcelFile('Insert directory of Excel file containing list of email addresses you plan to send') #Establishes the excel file you wish to import into Pandas
+file = pd.ExcelFile('./data.xlsx') #Establishes the excel file you wish to import into Pandas
 
 df = file.parse('Sheet1') #Uploads Sheet1 from the Excel file into a dataframe
 
