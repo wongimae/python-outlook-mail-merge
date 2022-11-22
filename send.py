@@ -38,4 +38,4 @@ for index, row in df.iterrows(): #Loops through each row in the dataframe
     newMail.display() #Displays the mail as a draft email
     
     # To send mail, uncomment below
-    newMail.Send()
+    # newMail.Send()
