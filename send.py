@@ -18,7 +18,7 @@ for index, row in df.iterrows(): #Loops through each row in the dataframe
     obj = win32com.client.Dispatch("Outlook.Application") #Initiates the Outlook application
     newMail = obj.CreateItem(olMailItem) #Creates an Outlook mail item
     newMail.Subject = subject #Sets the mail's subject to the 'subject' variable
-    newMail.HTMLbody = "(<HTML>content</HTML>)"
+    newMail.HTMLbody = (content)
     # print(content)
     # newMail.HTMLbody = ("" + content + "\r\n" + voucher) #Sets the mail's body to 'body' variable
     # print(type(newMail.HTMLbody))
@@ -27,4 +27,5 @@ for index, row in df.iterrows(): #Loops through each row in the dataframe
     newMail.To = email #Sets the mail's To email address to the 'email' variable
     newMail.display() #Displays the mail as a draft email
     
+    # To send mail, uncomment below
     # newMail.Send()
