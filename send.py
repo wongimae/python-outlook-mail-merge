@@ -26,16 +26,17 @@ for index, row in df.iterrows(): #Loops through each row in the dataframe
     # print(content)
     # newMail.HTMLbody = ("" + content + "\r\n" + voucher) #Sets the mail's body to 'body' variable
     # print(type(newMail.HTMLbody))
-    newMail.HTMLbody = ("<HTML> <p> Dear " 
-                + "Sir/Madam" + ","
-                + "<br> Thank you for participating in our survey. <br> <br> Please find your vouchers below. There are 5 x $5 vouchers so $25 in total. Please find the links below - you can use the QR code to redeem in-store. <br> <br>"
-                + voucher1 +"<br>" + voucher2 + "<br>" + voucher3 + "<br>" + voucher4 + "<br>" + voucher5 + "<br><br>"
-                + "IMPORTANT: Please reply to this email to confirm you have received the vouchers. <br> <br>"
-                + "Thank you again for your participation in this research. <br> Sincerely, <br> LKYCIC Human Wildlife Team"
-                + "</HTML>")
+    # newMail.HTMLbody = ("<HTML> <p> Dear " 
+    #             + "Sir/Madam" + ","
+    #             + "<br> Thank you for participating in our survey. <br> <br> Please find your vouchers below. There are 5 x $5 vouchers so $25 in total. Please find the links below - you can use the QR code to redeem in-store. <br> <br>"
+    #             + voucher1 + "<br><br>"
+    #             # +"<br>" + voucher2 + "<br>" + voucher3 + "<br>" + voucher4 + "<br>" + voucher5 + "<br><br>"
+    #             + "IMPORTANT: Please reply to this email to confirm you have received the vouchers. <br> <br>"
+    #             + "Thank you again for your participation in this research. <br> Sincerely, <br> LKYCIC Human Wildlife Team"
+    #             + "</HTML>")
 
     newMail.To = email #Sets the mail's To email address to the 'email' variable
-    newMail.display() #Displays the mail as a draft email
+    # newMail.display() #Displays the mail as a draft email
     
     # To send mail, uncomment below
-    # newMail.Send()
+    newMail.Send()
