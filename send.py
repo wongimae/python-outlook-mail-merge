@@ -2,6 +2,7 @@ import win32com.client
 import pandas as pd
 
 # file = pd.ExcelFile('Vouchers\\track_table\\Emails_Vouchers_0_22-11-2022-1610.xlsx') #Establishes the excel file you wish to import into Pandas
+# file = pd.ExcelFile('Emails_Vouchers_1_22-11-2022-1610.xlsx')
 file = pd.ExcelFile('Emails_Vouchers_1_22-11-2022-1610.xlsx')
 
 df = file.parse('Sheet1') #Uploads Sheet1 from the Excel file into a dataframe
@@ -32,7 +33,7 @@ for index, row in df.iterrows(): #Loops through each row in the dataframe
 
     newMail.To = email #Sets the mail's To email address to the 'email' variable
     # newMail.BCC = 'brigid_trenerry@sutd.edu.sg' #Sets the mail's CC email address to the 'email' variable
-    #newMail.display() #Displays the mail as a draft email
+    # newMail.display() #Displays the mail as a draft email
     
     # To send mail, uncomment below
     newMail.Send()
